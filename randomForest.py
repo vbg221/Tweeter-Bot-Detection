@@ -42,8 +42,8 @@ Define features from the data that are actually important.
 cols contains the features to be selected from training dataframe.
 colRes contains the labels of each tupple.
 '''
-#,'url','created_at','lang','status','favourites_count','friends_count'
-cols = ['screen_name','location','description','followers_count','listedcount']
+#,'url','created_at','lang','status','favourites_count'
+cols = ['screen_name','location','description','friends_count','followers_count','listedcount']
 colRes = ['bot']                    
 
 '''
@@ -211,7 +211,7 @@ plt.xlim([-1, train.shape[1]])
 plt.show()
 
 for f in range(0,train.shape[1]):
-    print("%d. feature %s (%f)" % (f + 1, cols[f], importances[indices[f]]))
+    print("%d. feature %s (%f)" % (f + 1, cols[indices[f]], importances[indices[f]]))
 
 #train.shape[1]
 
